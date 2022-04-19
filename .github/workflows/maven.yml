@@ -20,11 +20,13 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '16'
-        distribution: 'temurin'
+        distribution: 'adopt'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn clean install
+
     -name: Build & Push Docker Image
+      user: mr-smithers-excellent/docker-build-push@v5
       with:
         image: ashish310161/git-actions-pipeline
         tags: latest
