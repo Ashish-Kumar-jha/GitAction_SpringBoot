@@ -26,8 +26,8 @@ jobs:
       run: mvn clean install
 
     -name: Build & Push Docker Image
-      user: mr-smithers-excellent/docker-build-push@v5
-      with:
+     uses: mr-smithers-excellent/docker-build-push@v5
+     with:
         image: ashish310161/git-actions-pipeline
         tags: latest
         registry: docker.io
