@@ -24,3 +24,11 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    -name: Build & Push Docker Image
+      with:
+        image: ashish310161/git-actions-pipeline
+        tags: latest
+        registry: docker.io
+        dockerfile: Dockerfile
+        username: ${{secrets.DOCKER_USERNAM}}
+        password: ${{secrets.DOCKER_PASSWORD}}
