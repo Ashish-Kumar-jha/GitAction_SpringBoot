@@ -18,7 +18,7 @@ public class GitActionCiCdApplication {
 	String portNo;
 	@GetMapping("/pipeline-info")
 	public String welcome(){
-		return "GIT-CI/CD PIPELINE USING GIT ACTIONS TRIGGRED \r\n Name: "+projName + " \r\n Port: "+ portNo;
+		return "GIT-CI/CD PIPELINE USING -GIT ACTIONS- TRIGGRED \r\n Name: "+projName + " \r\n Port: "+ portNo;
 
 	}
 	public static void main(String[] args) {
