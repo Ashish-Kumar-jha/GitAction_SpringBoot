@@ -1,1 +1,5 @@
+com\Deploy\GitActionCiCd\Service\StudentInter.class
+com\Deploy\GitActionCiCd\Dao\Studentdao.class
 com\Deploy\GitActionCiCd\GitActionCiCdApplication.class
+com\Deploy\GitActionCiCd\Service\StudentService.class
+com\Deploy\GitActionCiCd\Entity\Student.class
