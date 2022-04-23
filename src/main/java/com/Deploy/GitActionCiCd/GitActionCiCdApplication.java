@@ -19,18 +19,14 @@ public class GitActionCiCdApplication {
 
 	@Value("${spring.data.username}")
 	String projName;
-
 	@Value("${server.port}")
 	String portNo;
-
 	@Autowired
 	StudentInter studentInter;
-
 	@GetMapping("/pipeline-info")
 	public String welcome(){
 		return "GIT-CI/CD PIPELINE USING -GIT ACTIONS- TRIGGRED \r\n Name: "+projName + " \r\n Port: "+ portNo;
 	}
-
 	@PostMapping("/student-data")
 	public Student saveStudentData(@RequestBody Student student){
 		return this.studentInter.savedata(student);
